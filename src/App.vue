@@ -4,7 +4,9 @@ import NavBar from "@/components/NavBar.vue";
 </script>
 
 <template>
-  <div class="flex flex-col h-screen overflow-auto">
+  <div
+    class="flex flex-col h-screen overflow-auto bg-gradient text-white tracking-normal"
+  >
     <NavBar />
     <main role="main" class="flex-1">
       <RouterView />
