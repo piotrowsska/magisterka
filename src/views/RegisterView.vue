@@ -9,25 +9,30 @@
         </p>
         <input
           type="text"
+          v-model="state.name"
           placeholder="Podaj imie..."
           class="w-full h-16 px-4 bg-white rounded-2xl text-black text-xl focus:outline-none mb-10"
         />
         <input
           type="text"
+          v-model="state.surname"
           placeholder="Podaj nazwisko..."
           class="w-full h-16 px-4 bg-white rounded-2xl text-black text-xl focus:outline-none mb-10"
         />
         <input
           type="email"
+          v-model="state.email"
           placeholder="Podaj email..."
           class="w-full h-16 px-4 bg-white rounded-2xl text-black text-xl focus:outline-none mb-10"
         />
         <input
           type="password"
+          v-model="state.password"
           placeholder="Podaj hasło..."
           class="w-full h-16 px-4 bg-white rounded-2xl text-black text-xl focus:outline-none mb-14"
         />
         <button
+          @click="register"
           class="h-16 justify-center bg-violet text-2xl px-10 rounded-2xl"
         >
           Zarejestruj
@@ -36,3 +41,31 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { reactive } from "vue";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useRouter } from "vue-router";
+
+const router = useRouter();
+
+const state = reactive({
+  name: "",
+  surname: "",
+  email: "",
+  password: "",
+});
+
+const register = async () => {
+  try {
+    await createUserWithEmailAndPassword(
+      getAuth(),
+      state.email,
+      state.password
+    );
+    router.push("/panel");
+  } catch (error: any) {
+    alert(error.code);
+  }
+};
+</script>
