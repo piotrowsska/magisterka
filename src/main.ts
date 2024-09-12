@@ -4,7 +4,7 @@ import { createPinia } from "pinia";
 import App from "./App.vue";
 import router from "./router";
 import { initializeApp } from "firebase/app";
-
+import 'remixicon/fonts/remixicon.css'
 import "./assets/main.css";
 
 const firebaseConfig = {

@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Poetsen One", "sans-serif"]
+        sans: ["Rubik", "sans-serif"]
       },
       letterSpacing: {
         small: "0.6px",
@@ -12,18 +12,15 @@ module.exports = {
         wide: "2px",
         widest: "3px"
       },
-      backgroundImage: {
-       "gradient": "linear-gradient(90deg, rgba(0,136,194,1) 0%, rgba(29,32,89,1) 100%)"
-      }
     },
     colors: {
       white: "#FFFFFF",
-      black: "#040404",
-      grey: "#F1F2F4",
+      black: "#161616",
       orange: "#EF9A60",
-      purple: "#6F5CF2",
-      blue: "#0099DD",
-      violet: "#1d2059"
+      blue: "#1586fe",
+      grey100: "#f8f9fb",
+      grey300: "#e6e7ed",
+      grey500: "#96a0b1"
     },
   },
   plugins: [],
