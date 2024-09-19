@@ -14,9 +14,8 @@
     </div>
     <div v-if="!isLoggedIn" class="flex space-x-20 text-black font-medium">
       <RouterLink to="/">Strona główna</RouterLink>
-      <RouterLink to="/">O nas</RouterLink>
+      <RouterLink to="/info">O nas</RouterLink>
       <RouterLink to="/register">Rejestracja</RouterLink>
-      <RouterLink to="/">Kontakt</RouterLink>
     </div>
     <RouterLink
       to="/login"

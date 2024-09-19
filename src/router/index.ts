@@ -21,6 +21,11 @@ const router = createRouter({
             component: () => import("../views/RegisterView.vue")
         },
         {
+            path: "/info",
+            name: "info",
+            component: () => import("../views/InfoView.vue")
+        },
+        {
             path: "/panel",
             name: "panel",
             component: () => import("../views/PanelView.vue"),

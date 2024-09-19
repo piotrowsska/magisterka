@@ -3,10 +3,15 @@
     <SideBar :active-panel="activePanel" @select-panel="selectPanel" />
     <div v-if="user" class="bg-grey w-full h-full p-12">
       <Profile
+        v-if="activePanel === 'user'"
         :user="user"
+        :success-message="successMessage"
+        :error-message="errorMessage"
         @update-data="updateUser"
         @save-data="saveUserData"
       />
+      <Tests v-else-if="activePanel == 'tests'" :user="user" />
+      <Prescriptions v-else :user="user" />
     </div>
   </div>
 </template>
@@ -17,11 +22,16 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { doc, getDoc, updateDoc, getFirestore } from "firebase/firestore";
 import SideBar from "@/components/Sidebar.vue";
 import Profile from "@/components/Profile/Profile.vue";
+import Tests from "@/components/Tests/Tests.vue";
+import Prescriptions from "@/components/Prescriptions/Prescriptions.vue";
+
+const auth = getAuth();
 
 const user = ref<any>(undefined);
 const uid = ref<null | string>(null);
-const auth = getAuth();
-const activePanel = ref("user");
+const activePanel = ref<string>("user");
+const successMessage = ref<string>("");
+const errorMessage = ref<string>("");
 
 onMounted(() => {
   onAuthStateChanged(auth, async (firebaseUser) => {
@@ -44,9 +54,17 @@ const saveUserData = async () => {
     try {
       const userRef = await doc(getFirestore(), "users", uid.value);
       await updateDoc(userRef, user.value);
-      alert("Twoje dane zostały zapisane!");
+      successMessage.value = "Dane zostały pomyślnie wysłane!";
+      errorMessage.value = "";
+      setTimeout(() => {
+        successMessage.value = "";
+      }, 5000);
     } catch (error) {
-      console.error(error);
+      errorMessage.value = "Wystąpił błąd podczas wysyłania danych.";
+      successMessage.value = "";
+      setTimeout(() => {
+        errorMessage.value = "";
+      }, 5000);
     }
   }
 };

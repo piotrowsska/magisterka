@@ -22,6 +22,12 @@
           class="w-full h-16 px-4 bg-grey100 rounded-2xl text-black text-xl mb-14 focus:outline-none"
         />
         <input
+          type="number"
+          v-model="state.pesel"
+          placeholder="Podaj pesel..."
+          class="w-full h-16 px-4 bg-grey100 rounded-2xl text-black text-xl mb-14 focus:outline-none"
+        />
+        <input
           type="email"
           v-model="state.email"
           placeholder="Podaj email..."
@@ -57,6 +63,7 @@ const state = reactive({
   surname: "",
   email: "",
   password: "",
+  pesel: null,
 });
 
 const register = async () => {
@@ -69,11 +76,12 @@ const register = async () => {
     const user = userCredential.user;
 
     await setDoc(doc(getFirestore(), "users", user.uid), {
+      id: user.uid,
       email: state.email,
       name: state.name,
       surname: state.surname,
       role: "User",
-      pesel: null,
+      pesel: state.pesel,
       number: null,
       adress: "",
       gender: "",
