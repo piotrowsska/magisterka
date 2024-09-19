@@ -1,3 +1,5 @@
+const { error } = require('console');
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./index.html", "./src/**/*.{vue,js,ts,jsx,tsx}"],
@@ -20,7 +22,9 @@ module.exports = {
       blue: "#1586fe",
       grey100: "#f8f9fb",
       grey300: "#e6e7ed",
-      grey500: "#96a0b1"
+      grey500: "#96a0b1",
+      success: "#26A212",
+      error: "#FF3B30"
     },
   },
   plugins: [],

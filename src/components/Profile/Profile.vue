@@ -86,6 +86,12 @@
     >
       Zapisz dane
     </button>
+    <p v-if="successMessage" class="text-success font-semibold pt-2">
+      {{ successMessage }}
+    </p>
+    <p v-if="errorMessage" class="text-error font-semibold pt-2">
+      {{ errorMessage }}
+    </p>
   </div>
 </template>
 
@@ -94,6 +100,8 @@ import { reactive } from "vue";
 
 const props = defineProps<{
   user: any;
+  successMessage: string;
+  errorMessage: string;
 }>();
 
 const userData = reactive({ ...props.user });
