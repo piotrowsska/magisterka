@@ -38,7 +38,7 @@
         >
         <input
           v-model="userData.pesel"
-          type="text"
+          type="number"
           placeholder="Podaj pesel..."
           class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
         />
@@ -82,6 +82,17 @@
     </form>
     <button
       class="bg-blue text-white mt-16 py-3 px-4 w-96 h-14 rounded-md"
+      :class="{
+        'bg-opacity-50 cursor-not-allowed':
+          userData.name.length < 3 ||
+          userData.surname.length < 3 ||
+          String(userData.pesel).length !== 11,
+      }"
+      :disabled="
+        userData.name.length < 3 ||
+        userData.surname.length < 3 ||
+        String(userData.pesel).length !== 11
+      "
       @click="saveData"
     >
       Zapisz dane

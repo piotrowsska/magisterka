@@ -3,7 +3,7 @@
     <div
       class="w-[500px] py-10 px-16 rounded-md bg-white bg-opacity-40 shadow-2xl"
     >
-      <div v-if="!state.resetPassword" class="flex flex-col items-center">
+      <div class="flex flex-col items-center">
         <p
           class="flex justify-center pb-14 text-blue text-5xl font-bold uppercase"
         >
@@ -28,26 +28,14 @@
           Zaloguj
         </button>
         <p
-          @click="state.resetPassword = true"
+          @click="goToResetPassword"
           class="text-violet font-semibold cursor-pointer"
         >
           Nie pamiętasz hasła?
         </p>
-      </div>
-      <div v-else class="flex flex-col items-center">
-        <p class="flex justify-center pb-14 text-blue text-5xl uppercase">
-          Resetuj
+        <p v-if="state.errorMessage" class="text-error font-semibold pt-5">
+          {{ state.errorMessage }}
         </p>
-        <input
-          type="password"
-          placeholder="Podaj hasło..."
-          class="w-full h-16 px-4 bg-grey100 rounded-2xl text-black text-xl mb-14 focus:outline-none"
-        />
-        <button
-          class="h-16 justify-center bg-blue text-white text-2xl px-10 rounded-2xl"
-        >
-          Zmień hasło
-        </button>
       </div>
     </div>
   </div>
@@ -61,7 +49,6 @@ import { useRouter } from "vue-router";
 const router = useRouter();
 
 const state = reactive({
-  resetPassword: false,
   email: "",
   password: "",
   errorMessage: "",
@@ -71,8 +58,13 @@ const singIn = async () => {
   try {
     await signInWithEmailAndPassword(getAuth(), state.email, state.password);
     router.push("/panel");
+    state.errorMessage = "";
   } catch (error: any) {
-    alert(error.code);
+    state.errorMessage = "Błędny login lub hasło";
   }
+};
+
+const goToResetPassword = () => {
+  router.push("/resetPassword");
 };
 </script>

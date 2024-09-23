@@ -21,6 +21,10 @@
           {{ user.surname }}
         </p>
         <p>
+          <span class="font-semibold">Pesel:</span>
+          {{ user.pesel }}
+        </p>
+        <p>
           <span class="font-semibold">Data badania:</span>
           {{ selectedTest.date }}
         </p>
@@ -28,7 +32,7 @@
       <p class="text-4xl pb-5">
         <span class="font-semibold">Badanie:</span> {{ selectedTest.diagnosis }}
       </p>
-      <div class="h-[772px] overflow-y-auto border-t-2">
+      <div class="h-[720px] overflow-y-auto border-t-2">
         <div v-for="(result, index) in selectedTest.results" :key="index">
           <div v-for="(value, key) in result" :key="key">
             <div class="text-xl py-5 border-b-2 flex justify-between px-10">
