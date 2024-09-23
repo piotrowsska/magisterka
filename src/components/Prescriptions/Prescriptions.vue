@@ -33,11 +33,15 @@
           {{ user.name }} {{ user.surname }}
         </p>
         <p>
+          <span class="font-semibold">Pesel:</span>
+          {{ user.pesel }}
+        </p>
+        <p>
           <span class="font-semibold">Wystawca:</span>
           {{ selectedPrescription.doctor }}
         </p>
       </div>
-      <div class="h-[700px] overflow-y-auto">
+      <div class="h-[650px] overflow-y-auto">
         <div
           v-for="(medicine, index) in selectedPrescription.medicines"
           :key="index"
