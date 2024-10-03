@@ -5,7 +5,7 @@
     </p>
     <form
       @input="emitData"
-      class="grid grid-cols-3 gap-y-16 text-lg text-black pt-20"
+      class="grid grid-cols-1 justify-items-center xl:justify-items-start xl:grid-cols-2 2xl:grid-cols-3 gap-y-16 text-lg text-black pt-20"
     >
       <div class="relative">
         <label
@@ -16,7 +16,7 @@
           v-model="userData.name"
           type="text"
           placeholder="Podaj imię..."
-          class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
+          class="border-2 border-grey300 py-3 px-4 w-[350px] rounded-md focus:outline-none placeholder:text-grey500"
         />
       </div>
       <div class="relative">
@@ -28,7 +28,7 @@
           v-model="userData.surname"
           type="text"
           placeholder="Podaj nazwisko..."
-          class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
+          class="border-2 border-grey300 py-3 px-4 w-[350px] rounded-md focus:outline-none placeholder:text-grey500"
         />
       </div>
       <div class="relative">
@@ -40,7 +40,7 @@
           v-model="userData.pesel"
           type="number"
           placeholder="Podaj pesel..."
-          class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
+          class="border-2 border-grey300 py-3 px-4 w-[350px] rounded-md focus:outline-none placeholder:text-grey500"
         />
       </div>
       <div class="relative">
@@ -50,9 +50,9 @@
         >
         <input
           v-model="userData.number"
-          type="text"
+          type="number"
           placeholder="Podaj numer..."
-          class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
+          class="border-2 border-grey300 py-3 px-4 w-[350px] rounded-md focus:outline-none placeholder:text-grey500"
         />
       </div>
       <div class="relative">
@@ -64,7 +64,7 @@
           v-model="userData.adress"
           type="text"
           placeholder="Podaj adres..."
-          class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
+          class="border-2 border-grey300 py-3 px-4 w-[350px] rounded-md focus:outline-none placeholder:text-grey500"
         />
       </div>
       <div class="relative">
@@ -76,27 +76,29 @@
           v-model="userData.gender"
           type="text"
           placeholder="Podaj płeć..."
-          class="border-2 border-grey300 py-3 px-4 w-96 rounded-md focus:outline-none placeholder:text-grey500"
+          class="border-2 border-grey300 py-3 px-4 w-[350px] rounded-md focus:outline-none placeholder:text-grey500"
         />
       </div>
     </form>
-    <button
-      class="bg-blue text-white mt-16 py-3 px-4 w-96 h-14 rounded-md"
-      :class="{
-        'bg-opacity-50 cursor-not-allowed':
+    <div class="flex justify-center xl:justify-start">
+      <button
+        class="bg-blue text-white mt-16 py-3 px-4 w-[350px] h-14 rounded-md"
+        :class="{
+          'bg-opacity-50 cursor-not-allowed':
+            userData.name.length < 3 ||
+            userData.surname.length < 3 ||
+            String(userData.pesel).length !== 11,
+        }"
+        :disabled="
           userData.name.length < 3 ||
           userData.surname.length < 3 ||
-          String(userData.pesel).length !== 11,
-      }"
-      :disabled="
-        userData.name.length < 3 ||
-        userData.surname.length < 3 ||
-        String(userData.pesel).length !== 11
-      "
-      @click="saveData"
-    >
-      Zapisz dane
-    </button>
+          String(userData.pesel).length !== 11
+        "
+        @click="saveData"
+      >
+        Zapisz dane
+      </button>
+    </div>
     <p v-if="successMessage" class="text-success font-semibold pt-2">
       {{ successMessage }}
     </p>
@@ -108,9 +110,10 @@
 
 <script setup lang="ts">
 import { reactive } from "vue";
+import type { User } from "@/types/types";
 
 const props = defineProps<{
-  user: any;
+  user: User;
   successMessage: string;
   errorMessage: string;
 }>();

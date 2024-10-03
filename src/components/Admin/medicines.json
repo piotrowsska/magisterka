@@ -1,0 +1,298 @@
+{
+    "medicines": [
+        {
+          "name": "Paracetamol",
+          "dose": "500 mg",
+          "description": "Przeciwbólowy, przeciwgorączkowy",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Ibuprofen",
+          "dose": "200 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Aspiryna",
+          "dose": "500 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy, przeciwkrzepliwy",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Amoksycylina",
+          "dose": "500 mg",
+          "description": "Antybiotyk (penicylina) - leczenie zakażeń bakteryjnych",
+          "quantity": "21 tabletek"
+        },
+        {
+          "name": "Klarytromycyna",
+          "dose": "250 mg",
+          "description": "Antybiotyk (makrolid) - leczenie zakażeń bakteryjnych",
+          "quantity": "14 tabletek"
+        },
+        {
+          "name": "Cefuroksym",
+          "dose": "500 mg",
+          "description": "Antybiotyk (cefalosporyna) - leczenie zakażeń bakteryjnych",
+          "quantity": "10 tabletek"
+        },
+        {
+          "name": "Tramadol",
+          "dose": "50 mg",
+          "description": "Przeciwbólowy (opioidowy) - leczenie umiarkowanego bólu",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Ketoprofen",
+          "dose": "100 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Naproksen",
+          "dose": "250 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Metronidazol",
+          "dose": "500 mg",
+          "description": "Antybiotyk - leczenie zakażeń bakteryjnych i pasożytniczych",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Furagina",
+          "dose": "50 mg",
+          "description": "Antybiotyk - leczenie zakażeń układu moczowego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Kwas acetylosalicylowy",
+          "dose": "75 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy, przeciwkrzepliwy",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Kwas mefenamowy",
+          "dose": "500 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Diklofenak",
+          "dose": "50 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Morfina",
+          "dose": "10 mg",
+          "description": "Przeciwbólowy (opioidowy) - leczenie ciężkiego bólu",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Kodeina",
+          "dose": "30 mg",
+          "description": "Przeciwbólowy (opioidowy) - leczenie umiarkowanego bólu",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Fentanyl",
+          "dose": "25 mcg/h",
+          "description": "Przeciwbólowy (opioidowy) - leczenie ciężkiego bólu, plaster transdermalny",
+          "quantity": "5 plastrów"
+        },
+        {
+          "name": "Oksykodon",
+          "dose": "10 mg",
+          "description": "Przeciwbólowy (opioidowy) - leczenie umiarkowanego do ciężkiego bólu",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Meloksykam",
+          "dose": "7.5 mg",
+          "description": "Przeciwbólowy, przeciwzapalny, przeciwgorączkowy",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Roksytromycyna",
+          "dose": "150 mg",
+          "description": "Antybiotyk (makrolid) - leczenie zakażeń bakteryjnych",
+          "quantity": "10 tabletek"
+        },
+        {
+          "name": "Azitromycyna",
+          "dose": "500 mg",
+          "description": "Antybiotyk (makrolid) - leczenie zakażeń bakteryjnych",
+          "quantity": "6 tabletek"
+        },
+        {
+          "name": "Penicylina",
+          "dose": "1 mln j.m.",
+          "description": "Antybiotyk (penicylina) - leczenie zakażeń bakteryjnych",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Ciprofloksacyna",
+          "dose": "500 mg",
+          "description": "Antybiotyk (fluorochinolon) - leczenie zakażeń bakteryjnych",
+          "quantity": "10 tabletek"
+        },
+        {
+          "name": "Levofloksacyna",
+          "dose": "500 mg",
+          "description": "Antybiotyk (fluorochinolon) - leczenie zakażeń bakteryjnych",
+          "quantity": "10 tabletek"
+        },
+        {
+          "name": "Doxycyklina",
+          "dose": "100 mg",
+          "description": "Antybiotyk (tetracyklina) - leczenie zakażeń bakteryjnych",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Sulfasalazyna",
+          "dose": "500 mg",
+          "description": "Leczenie zapalnych chorób jelit",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Metotreksat",
+          "dose": "10 mg",
+          "description": "Leczenie chorób autoimmunologicznych i nowotworów",
+          "quantity": "10 tabletek"
+        },
+        {
+          "name": "Loperamid",
+          "dose": "2 mg",
+          "description": "Leczenie biegunek",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Ranitidyna",
+          "dose": "150 mg",
+          "description": "Leczenie wrzodów żołądka i refluksu żołądkowo-przełykowego",
+          "quantity": "20 tabletek"
+        },
+        {
+          "name": "Omeprazol",
+          "dose": "20 mg",
+          "description": "Leczenie wrzodów żołądka i refluksu żołądkowo-przełykowego",
+          "quantity": "30 kapsułek"
+        },
+        {
+          "name": "Pantoprazol",
+          "dose": "40 mg",
+          "description": "Leczenie wrzodów żołądka i refluksu żołądkowo-przełykowego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Esomeprazol",
+          "dose": "20 mg",
+          "description": "Leczenie wrzodów żołądka i refluksu żołądkowo-przełykowego",
+          "quantity": "28 tabletek"
+        },
+        {
+          "name": "Simwastatyna",
+          "dose": "20 mg",
+          "description": "Obniżanie poziomu cholesterolu",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Atorwastatyna",
+          "dose": "10 mg",
+          "description": "Obniżanie poziomu cholesterolu",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Rosuwastatyna",
+          "dose": "5 mg",
+          "description": "Obniżanie poziomu cholesterolu",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Enalapryl",
+          "dose": "5 mg",
+          "description": "Leczenie nadciśnienia tętniczego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Ramipryl",
+          "dose": "5 mg",
+          "description": "Leczenie nadciśnienia tętniczego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Losartan",
+          "dose": "50 mg",
+          "description": "Leczenie nadciśnienia tętniczego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Amlodypina",
+          "dose": "5 mg",
+          "description": "Leczenie nadciśnienia tętniczego i choroby wieńcowej",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Walsartan",
+          "dose": "80 mg",
+          "description": "Leczenie nadciśnienia tętniczego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Bisoprolol",
+          "dose": "5 mg",
+          "description": "Leczenie nadciśnienia tętniczego i choroby wieńcowej",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Metoprolol",
+          "dose": "50 mg",
+          "description": "Leczenie nadciśnienia tętniczego i choroby wieńcowej",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Nebiwolol",
+          "dose": "5 mg",
+          "description": "Leczenie nadciśnienia tętniczego",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Kwas foliowy",
+          "dose": "5 mg",
+          "description": "Suplementacja witaminy B9, leczenie niedokrwistości",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Witamina D3",
+          "dose": "1000 j.m.",
+          "description": "Suplementacja witaminy D, wspomaganie zdrowia kości",
+          "quantity": "30 kapsułek"
+        },
+        {
+          "name": "Cynk",
+          "dose": "15 mg",
+          "description": "Suplementacja cynku, wspomaganie odporności",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Żelazo",
+          "dose": "100 mg",
+          "description": "Suplementacja żelaza, leczenie niedokrwistości",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Magnez",
+          "dose": "375 mg",
+          "description": "Suplementacja magnezu, wspomaganie zdrowia serca i mięśni",
+          "quantity": "30 tabletek"
+        },
+        {
+          "name": "Kalium (Potas)",
+          "dose": "600 mg",
+          "description": "Suplementacja potasu, wspomaganie równowagi elektrolitowej",
+          "quantity": "30 tabletek"
+        }
+      ]
+}
