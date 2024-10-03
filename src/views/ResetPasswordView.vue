@@ -48,7 +48,6 @@ const handleResetPassword = async () => {
     state.successMessage = "Wysłano e-mail z instrukcją resetowania";
     state.errorMessage = "";
   } catch (error) {
-    console.log(error);
     state.errorMessage = "Błąd podczas wysyłania e-maila";
     state.successMessage = "";
   }

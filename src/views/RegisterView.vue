@@ -88,7 +88,7 @@ const state = reactive({
   surname: "",
   email: "",
   password: "",
-  pesel: null,
+  pesel: "",
 });
 
 const errors = reactive({
@@ -176,6 +176,7 @@ const register = async () => {
       prescriptions: [],
       tests: [],
     });
+
     router.push("/panel");
   } catch (error: any) {
     alert(error.code);
