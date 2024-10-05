@@ -52,6 +52,22 @@
           Recepty
         </p>
       </div>
+      <div
+        class="flex items-center bg-blue py-4 font-semibold cursor-pointer"
+        :class="activePanel === 'medchat' ? 'bg-blue' : 'bg-white'"
+        @click="selectActivePanel('medchat')"
+      >
+        <i
+          class="ri-chat-1-line text-xl pl-7 pr-4"
+          :class="activePanel === 'medchat' ? 'text-black' : 'text-blue'"
+        ></i>
+        <p
+          class="uppercase text-lg"
+          :class="activePanel === 'medchat' ? 'text-white' : ' text-black'"
+        >
+          MedChat
+        </p>
+      </div>
     </div>
   </div>
 </template>

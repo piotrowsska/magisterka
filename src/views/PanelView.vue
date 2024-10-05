@@ -15,7 +15,11 @@
         @save-data="saveUserData"
       />
       <UserTests v-else-if="activePanel == 'tests'" :user="user" />
-      <UserPrescriptions v-else :user="user" />
+      <UserPrescriptions
+        v-else-if="activePanel == 'prescriptions'"
+        :user="user"
+      />
+      <MedChat v-else />
     </div>
     <div v-else class="w-full">
       <div v-if="filteredUsers" class="bg-grey w-full h-full p-12">
@@ -27,7 +31,12 @@
           v-else-if="activePanel == 'tests'"
           :patients="filteredUsers"
         />
-        <AdminPrescriptions v-else :patients="filteredUsers" :user="user" />
+        <AdminPrescriptions
+          v-else-if="activePanel == 'prescriptions'"
+          :patients="filteredUsers"
+          :user="user"
+        />
+        <MedChat v-else />
       </div>
     </div>
   </div>
@@ -51,6 +60,7 @@ import UserPrescriptions from "@/components/User/Prescriptions.vue";
 import AdminPatients from "@/components/Admin/Patients.vue";
 import AdminTests from "@/components/Admin/Tests.vue";
 import AdminPrescriptions from "@/components/Admin/Prescriptions.vue";
+import MedChat from "@/components/MedChat.vue";
 import type { User } from "@/types/types";
 
 const auth = getAuth();
