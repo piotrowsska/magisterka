@@ -9,6 +9,9 @@
     "compilerOptions": {
       "composite": true,
       "types": ["node"],
-      "ignoreDeprecations": "5.0"
+      "ignoreDeprecations": "5.0",
+      "preserveValueImports": false,
+      "importsNotUsedAsValues": "remove",
+      "verbatimModuleSyntax": true,
     }
   }
